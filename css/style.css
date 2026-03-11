@@ -469,7 +469,7 @@ h5 {
 
 
 #section3_h2_wrap {
-    background-color: #dad4ca;
+    background-color: #987558b7;
     padding-top: 100px;
 }
 
@@ -479,7 +479,7 @@ h5 {
 }
 
 .section3_wrap {
-    background-color: #dad4ca;
+    background-color: #987558b7;
     padding-top: 60px;
     padding-bottom: 120px;
 }
@@ -520,8 +520,8 @@ h5 {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    top: 38%;
-    transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-120%);
 }
 
 .section3 .swiper-button-prev::after,
