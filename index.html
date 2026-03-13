@@ -82,8 +82,52 @@
     </div>
     <!-- 헤더 끝 -->
     <!-- 버튼들 -->
-    <a href="#" class="up_button"><img src="" alt="">TOP</a>
-    <a href="#" class="chat_button"><img src="" alt="">CHAT</a>
+    <a href="#" class="up_button">TOP</a>
+    <a href="#" class="chat_button">CHAT</a>
+    <!-- 챗봇 -->
+    <div class="chat_wrap" id="chatWrap">
+        <div class="chat_header">
+            <div><img src="./image/favicon_tangles_40x40.png" alt=""></div>
+            <div>
+                <p>TANGLES
+                    <br><button type="button">운영시간 | 월-금 13:00 - 17:00</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="chat_container_wrap">
+            <div class="chat_container">
+                <div><img src="./image/favicon_tangles_40x40.png" alt=""></div>
+                <div>
+                    <p>TANGLES</p>
+                    <p id="chatText">
+                    </p>
+                </div>
+            </div>
+
+            <div class="chat_input">
+                <input type="text" placeholder=" 메시지를 입력하세요">
+                <button type="button">전송</button>
+            </div>
+        </div>
+
+        <div class="chat_basket">
+            <a href="">
+                <div><img src="" alt=""></div>
+                <div>
+                    <p>주문 목록 보기
+                        <br>나의 주문 내역, 배송 상태 조회하기 >
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="chat_footer">
+            <button type="button" class="chat_close">채팅 종료하기</button>
+        </div>
+    </div>
+    <!-- 챗봇 끝 -->
+
     <!-- 메인 배너 시작 -->
     <div id="main_banner"><video src="./image/main_banner_4.mp4" muted autoplay loop></video>
     </div>
@@ -365,13 +409,13 @@
                             </div>
                         </div>
                     </div>
-                        <div class="swiper-button-prev sec3-button-prev">
-                            <img src="./image/slide_left.png" alt="prev">
-                        </div>
-                        <div class="swiper-button-next sec3-button-next">
-                            <img src="./image/slide_right.png" alt="next">
-                        </div>
+                    <div class="swiper-button-prev sec3-button-prev">
+                        <img src="./image/slide_left.png" alt="prev">
                     </div>
+                    <div class="swiper-button-next sec3-button-next">
+                        <img src="./image/slide_right.png" alt="next">
+                    </div>
+                </div>
                 <div class="swiper sec3_swiper2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -847,6 +891,47 @@
             e.preventDefault();
             $(this).toggleClass('active');
         });
+    </script>
+    <!-- 챗봇 버튼 -->
+    <script>
+        const chatOpen = document.querySelector('.chat_button');
+        const chatWrap = document.querySelector('.chat_wrap');
+        const chatClose = document.querySelector('.chat_close');
+        chatOpen.addEventListener('click', function (e) {
+            e.preventDefault();   // 페이지 위로 이동 방지
+        });
+        chatOpen.addEventListener('click', function () {
+            chatWrap.classList.add('active');
+
+            chatText.innerHTML = "";
+            index = 0;
+
+            typeWriter();
+
+        });
+
+        chatClose.addEventListener('click', function () {
+            chatWrap.classList.remove('active');
+        });
+        const text = "안녕하세요, 탱글스입니다.\n무엇을 도와드릴까요?";
+        const chatText = document.getElementById("chatText");
+
+        let index = 0;
+
+        function typeWriter() {
+
+            if (index < text.length) {
+
+                if (text[index] === "\n") {
+                    chatText.innerHTML += "<br>";
+                } else {
+                    chatText.innerHTML += text[index];
+                }
+
+                index++;
+                setTimeout(typeWriter, 60);
+            }
+        }
     </script>
 </body>
 
