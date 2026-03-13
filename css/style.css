@@ -240,11 +240,123 @@ body {
     transform: scale(1.08);
 }
 
+.chat_wrap {
+    width: 260px;
+    height: 360px;
+    border: 1px solid #987558;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 18px;
+    position: fixed;
+    right: 90px;
+    bottom: 40px;
+    background-color: #ffffff;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.chat_wrap.active {
+    display: block;
+}
+
+.chat_header,
+.chat_container,
+.chat_input,
+.chat_basket {
+    display: flex;
+    margin: 10px auto;
+}
+
+.chat_input {
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.chat_header,
+.chat_basket {
+    background-color: #ecececb9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.chat_wrap img {
+    margin-right: 10px;
+    display: block;
+}
+
+.chat_wrap button {
+    color: #6F6661;
+    background-color: #F8F1E7;
+    border: none;
+    padding: 2px 6px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.chat_input input {
+    border: none;
+    width: 75%;
+    background-color: #dad4cab7;
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.chat_input input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#chatText::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.chat_footer {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+}
+
+.chat_footer ul {
+    display: flex;
+}
+
+.chat_footer li a {
+    padding: 10px;
+}
+
+.chat_container_wrap {
+    border: 1px solid #333434;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+
 #main_banner {
     height: 880px;
     background-color: #dad4ca;
+}
+
+#main_banner video {
+    width: 100%;
+    height: auto;
     display: block;
-    overflow: hidden;
 }
 
 .section1_wrap {
@@ -256,14 +368,14 @@ body {
 
 #section1_h2_wrap {
     background-color: #fff;
-    padding-top: 120px;
+    padding-top: 360px;
     height: 220px;
-    box-sizing: border-box;
 }
 
 .sec1_h2 {
     width: 1320px;
-    margin: 0 auto;
+    margin: 0px auto;
+    margin-top: 120px;
 }
 
 h2 {
