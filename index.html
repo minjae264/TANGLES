@@ -954,6 +954,15 @@
 				}
 				});
 				});
+		// 실제 물리적 화면 너비로 모바일 판별
+if (window.screen.width <= 768) {
+    document.querySelectorAll('.pc-video').forEach(v => v.style.display = 'none');
+    document.querySelectorAll('.mobile-thumb').forEach(img => {
+        img.style.display = 'block';
+        img.style.width = '100%';
+        img.style.height = 'auto';
+    });
+}
 		</script>
 </body>
 
