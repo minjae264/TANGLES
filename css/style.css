@@ -1267,7 +1267,27 @@ h3 {
     margin-right: 50px;
 }
 /* ===== 모바일 픽스 ===== */
+/* 기본: 모바일 이미지 숨김 */
+.mobile-thumb {
+  display: none;
+}
+.mobile-thumb {
+    display: none;
+    width: 100%;
+}
+/* 모바일에서 */
+@media screen and (max-width: 768px) {
 
+  .pc-video {
+    display: none;
+  }
+
+  .mobile-thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
 /* 메인 배너 비디오 */
 #main_banner {
     position: relative;
@@ -1276,7 +1296,7 @@ h3 {
 
 #main_banner video {
     width: 100%;
-    height: 880px;       /* 고정 높이로 비디오가 잘리지 않게 */
+    height: auto;       /* 고정 높이로 비디오가 잘리지 않게 */
     object-fit: cover;   /* 비율 유지하며 꽉 채움 */
     display: block;
 }
