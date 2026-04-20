@@ -1339,3 +1339,11 @@ h3 {
     height: auto;
   }
 }
+/* 기본(데스크탑): fixed 패럴랙스 유지 */
+.section1_wrap {
+    background-attachment: fixed;
+}
+
+#section7_wrap {
+    background-attachment: fixed;
+}
