@@ -1303,12 +1303,12 @@ h3 {
 
 /* 섹션1 배경 이미지 — fixed 대신 scroll로 변경 */
 .section1_wrap {
-    background-attachment: scroll;   /* mobile에서 fixed 오작동 방지 */
+    background-attachment: fixed;   /* mobile에서 fixed 오작동 방지 */
 }
 
 /* 섹션7 배경 이미지도 동일 문제 */
 #section7_wrap {
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 /* ===== welcome banner 영상/이미지 대응 ===== */
 .b1_video video {
