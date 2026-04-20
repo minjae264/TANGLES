@@ -1266,3 +1266,246 @@ h3 {
 .footer_gnb2 li {
     margin-right: 50px;
 }
+/* =========================
+   📱 MOBILE 대응 (핵심 수정)
+========================= */
+@media screen and (max-width: 768px) {
+
+  /* 전체 기본 */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* 컨테이너 폭 풀기 */
+  .header_top,
+  .header_main,
+  .section1,
+  .section2,
+  .section3,
+  .section5,
+  .footer_top,
+  .footer_bottom {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  /* =========================
+     🔥 히어로 영상 (문제 핵심)
+  ========================= */
+  #main_banner {
+    height: auto;
+  }
+
+  #main_banner video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* =========================
+     🔥 section1 (이미지 안보이는 원인)
+  ========================= */
+  .section1_wrap {
+    height: auto;
+    background-attachment: scroll; /* 모바일 fixed 깨짐 방지 */
+    background-size: cover;
+    padding: 60px 0;
+  }
+
+  .section1 {
+    height: auto;
+    padding-top: 0;
+    position: static;
+  }
+
+  .sec1_box {
+    position: static;  /* absolute 제거 */
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .sec1_box_1 {
+    padding: 30px;
+    height: auto;
+  }
+
+  .sec1_box_2 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sec1_box_2 li {
+    width: 100%;
+    padding: 20px;
+    border-right: none;
+  }
+
+  /* =========================
+     section2 (슬라이드 깨짐 방지)
+  ========================= */
+  #section2_wrap {
+    height: auto;
+    margin: 60px 0;
+    padding-top: 40px;
+  }
+
+  .section2 {
+    height: auto;
+  }
+
+  .sec2_inner {
+    padding: 20px;
+    height: auto;
+  }
+
+  .sec2_img1 {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .sec2_img2 {
+    display: none; /* 모바일에선 제거 추천 */
+  }
+
+  .sec2_txt1 {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .sec2_button {
+    position: static;
+    margin-top: 20px;
+  }
+
+  /* =========================
+     section3 (상품 그리드)
+  ========================= */
+  .sec3_swiper_wrap {
+    width: 100%;
+    height: auto;
+  }
+
+  .sec3_swiper,
+  .sec3_swiper2 {
+    height: auto;
+  }
+
+  /* =========================
+     banner
+  ========================= */
+  #banner1 {
+    height: auto;
+  }
+
+  .b1_video video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* =========================
+     section4 (아티스트)
+  ========================= */
+  #section4 {
+    width: 100%;
+  }
+
+  .sec4_wrap {
+    flex-direction: column;
+  }
+
+  .sec4_left {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .sec4_content li {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-size: cover;
+  }
+
+  /* =========================
+     section5 (슬라이드)
+  ========================= */
+  #section5_wrap {
+    height: auto;
+  }
+
+  .section5 {
+    width: 100%;
+  }
+
+  /* =========================
+     section6 (배너)
+  ========================= */
+  #section6 {
+    width: 100%;
+    height: auto;
+  }
+
+  #section6 ul {
+    flex-direction: column;
+  }
+
+  #section6 ul li {
+    width: 100%;
+  }
+
+  /* =========================
+     section7 (리뷰)
+  ========================= */
+  #section7_wrap {
+    height: auto;
+    background-attachment: scroll;
+  }
+
+  .section7 {
+    width: 100%;
+    height: auto;
+  }
+
+  .sec7_box1,
+  .sec7_box2,
+  .sec7_box3,
+  .sec7_box4 {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* =========================
+     section8
+  ========================= */
+  #section8 ul {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    margin: 100px auto;
+  }
+
+  #section8 ul li {
+    width: 100%;
+    height: auto;
+  }
+
+  /* =========================
+     footer
+  ========================= */
+  .footer_top {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    height: auto;
+  }
+
+}
