@@ -957,6 +957,11 @@
 		if (window.screen.width <= 768) {
     document.getElementById('main_banner').style.height = 'auto';
 }
+		// 실제 기기 너비로 모바일 판별 (viewport 고정 우회)
+if (window.screen.width <= 768) {
+    document.querySelector('.section1_wrap').style.backgroundAttachment = 'scroll';
+    document.querySelector('#section7_wrap').style.backgroundAttachment = 'scroll';
+}
 		// 실제 물리적 화면 너비로 모바일 판별
 if (window.screen.width <= 768) {
     document.querySelectorAll('.pc-video').forEach(v => v.style.display = 'none');
