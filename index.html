@@ -954,22 +954,25 @@
 				}
 				});
 				});
-		if (window.screen.width <= 768) {
-    document.getElementById('main_banner').style.height = 'auto';
-}
-		// 실제 기기 너비로 모바일 판별 (viewport 고정 우회)
 if (window.screen.width <= 768) {
+    // 메인 배너 높이 auto
+    document.getElementById('main_banner').style.height = 'auto';
+
+    // 패럴랙스 scroll로 전환
     document.querySelector('.section1_wrap').style.backgroundAttachment = 'scroll';
     document.querySelector('#section7_wrap').style.backgroundAttachment = 'scroll';
-}
-		// 실제 물리적 화면 너비로 모바일 판별
-if (window.screen.width <= 768) {
+
+    // pc 영상 숨기고 모바일 썸네일 표시
     document.querySelectorAll('.pc-video').forEach(v => v.style.display = 'none');
     document.querySelectorAll('.mobile-thumb').forEach(img => {
         img.style.display = 'block';
         img.style.width = '100%';
         img.style.height = 'auto';
     });
+
+    // banner1 높이 및 translateY 제거
+    document.getElementById('banner1').style.height = 'auto';
+    document.querySelector('.b1_video').style.transform = 'none';
 }
 		</script>
 </body>
