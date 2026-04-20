@@ -360,10 +360,11 @@ body {
 }
 
 .section1_wrap {
-    height: 880px;
+     height: 880px;
     box-sizing: border-box;
-    background: url(../image/sec1_bg.jpg) no-repeat;
+    background: url(../image/sec1_bg.jpg) no-repeat center center;
     background-attachment: fixed;
+    background-size: cover;   /* ← 이게 없으면 패럴랙스 효과가 안 보임 */
 }
 
 #section1_h2_wrap {
@@ -1067,10 +1068,10 @@ h3 {
 }
 
 #section7_wrap {
-    height: 770px;
+   height: 770px;
     background: url(../image/sec7_bg6.jpg) no-repeat center center;
     background-attachment: fixed;
-    /* 한꺼번에 작성하고 싶다면 맨 마지막에 작성 하면 됨. */
+    background-size: cover;   /* ← 이게 없으면 패럴랙스 효과가 안 보임 */
 }
 
 
@@ -1301,15 +1302,7 @@ h3 {
     display: block;
 }
 
-/* 섹션1 배경 이미지 — fixed 대신 scroll로 변경 */
-.section1_wrap {
-    background-attachment: fixed;   /* mobile에서 fixed 오작동 방지 */
-}
 
-/* 섹션7 배경 이미지도 동일 문제 */
-#section7_wrap {
-    background-attachment: fixed;
-}
 /* ===== welcome banner 영상/이미지 대응 ===== */
 .b1_video video {
   width: 100%;
@@ -1338,12 +1331,4 @@ h3 {
   #banner1 {
     height: auto;
   }
-}
-/* 기본(데스크탑): fixed 패럴랙스 유지 */
-.section1_wrap {
-    background-attachment: fixed;
-}
-
-#section7_wrap {
-    background-attachment: fixed;
 }
